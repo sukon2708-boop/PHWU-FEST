@@ -1172,11 +1172,7 @@ p{
 }
 
 
-.letter-img1{
-  width: 350px;           /* 🔥 ใหญ่ขึ้นชัด */
-  max-width: 100%;
-  margin: 2px auto 11px;  /* 🔥 ดึงขึ้นใกล้ข้อความ */
-}
+
 
 
 .imgxxx{
@@ -1404,20 +1400,7 @@ h1 + .subtle{
   }
 }
 
-.vinyl {
-  width: 450px;
-  animation: spin 4s linear infinite;
-  animation-play-state: paused;
-}
 
-.vinyl.playing {
-  animation-play-state: running;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
 
 .btn {
   transition: all 0.3s ease;
@@ -1465,104 +1448,47 @@ body {
   text-align: center;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* =====================
-   จัดกึ่งกลางหน้า (letter + music)
-===================== */
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.shell.center {
-  text-align: center;
-}
-
-/* =====================
-   ซองจดหมาย
-===================== */
-.letter-img {
-  display: block;
-  margin: 20px auto;
-  max-width: 240px;
-}
-
-/* =====================
-   แผ่นเสียง
-===================== */
-.vinyl-wrap {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.vinyl {
-  width: 260px; /* ⬅️ จากเดิมเล็ก → ใหญ่ขึ้น */
-  transition: transform 0.3s ease;
-}
-
-.vinyl.playing {
-  animation: vinylSpin 3s linear infinite;
-}
-
-@keyframes vinylSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* =====================
-   โน้ตเพลงลอย
-===================== */
+/* โน้ตเพลง */
 .music-notes {
   position: absolute;
+  inset: 0;
   pointer-events: none;
 }
 
 .note {
   position: absolute;
-  width: 26px;
+  font-size: 22px;
   opacity: 0;
 }
 
 .note1 {
-  left: -40px;
-  top: 40%;
+  left: -12px;
+  bottom: 45%;
 }
 
 .note2 {
-  right: -40px;
-  top: 30%;
+  right: -12px;
+  bottom: 35%;
 }
 
 .music-notes.active .note1 {
-  animation: floatNote 3s infinite;
+  animation: noteFloat 2.5s infinite;
 }
 
 .music-notes.active .note2 {
-  animation: floatNote 3s infinite 1.5s;
+  animation: noteFloat 2.5s infinite 1.2s;
 }
 
-@keyframes floatNote {
+@keyframes noteFloat {
   0% {
-    transform: translateY(20px);
+    transform: translateY(10px);
     opacity: 0;
   }
   30% {
     opacity: 1;
   }
   100% {
-    transform: translateY(-60px);
+    transform: translateY(-50px);
     opacity: 0;
   }
 }
