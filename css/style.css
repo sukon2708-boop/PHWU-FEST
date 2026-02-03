@@ -1475,3 +1475,94 @@ body {
     transform: translateY(0);
   }
 }
+/* =====================
+   จัดกึ่งกลางหน้า (letter + music)
+===================== */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shell.center {
+  text-align: center;
+}
+
+/* =====================
+   ซองจดหมาย
+===================== */
+.letter-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 240px;
+}
+
+/* =====================
+   แผ่นเสียง
+===================== */
+.vinyl-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.vinyl {
+  width: 260px; /* ⬅️ จากเดิมเล็ก → ใหญ่ขึ้น */
+  transition: transform 0.3s ease;
+}
+
+.vinyl.playing {
+  animation: vinylSpin 3s linear infinite;
+}
+
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* =====================
+   โน้ตเพลงลอย
+===================== */
+.music-notes {
+  position: absolute;
+  pointer-events: none;
+}
+
+.note {
+  position: absolute;
+  width: 26px;
+  opacity: 0;
+}
+
+.note1 {
+  left: -40px;
+  top: 40%;
+}
+
+.note2 {
+  right: -40px;
+  top: 30%;
+}
+
+.music-notes.active .note1 {
+  animation: floatNote 3s infinite;
+}
+
+.music-notes.active .note2 {
+  animation: floatNote 3s infinite 1.5s;
+}
+
+@keyframes floatNote {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
