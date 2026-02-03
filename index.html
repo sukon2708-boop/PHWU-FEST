@@ -1,12 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PHWU FEST</title>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <h1>Welcome to PHWU FEST 💖</h1>
-  <a href="letter.html">ไปหน้า Letter</a><br>
-  <a href="music.html">ไปหน้า Music</a>
+
+  <div class="container">
+    <div class="shell center">
+
+      <h4>PHWU FEST</h4>
+      <p class="subtle" id="hintText">ยิ้มหวานก่อนแตะซองเพื่อเปิด</p>
+
+      <img
+        src="assets/letter1.png"
+        alt="letter"
+        id="openLetter"
+        class="letter-img letter-closed"
+        draggable="false"
+      />
+
+      <!-- ปุ่มด้านล่างซอง -->
+      <div class="btn-row">
+        <button class="btn" id="readBtn">แตะจดหมาย</button>
+
+        <!-- ⭐ ปุ่มถัดไป (อยู่ตำแหน่งที่วงไว้) -->
+       <a
+  class="btn secondary"
+  id="nextBtn"
+  href="music.html"
+  style="display:none; margin-left:12px;"
+>
+  ถัดไป
+</a>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <p id="letterText"></p>
+      <div class="row">
+        <button class="btn" id="closeModalBtn">ปิด</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/letter.js"></script>
 </body>
 </html>
