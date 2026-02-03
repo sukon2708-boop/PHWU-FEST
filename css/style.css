@@ -973,8 +973,8 @@ p{
 /* Vinyl wrap ต้องเป็น relative */
 .vinyl-wrap{
   position: relative;       /* 🔥 สำคัญ */
-  width:400px;
-  height:400px;
+  width:600px;
+  height:600px;
   margin: 0 auto 14px;
   display:flex;
   align-items:center;
@@ -1495,4 +1495,16 @@ body {
     transform: translateY(-50px);
     opacity: 0;
   }
+}
+
+.letter-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.letter-img{
+  display: block;
+  max-width: 100%;
 }

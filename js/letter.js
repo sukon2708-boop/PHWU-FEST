@@ -47,6 +47,7 @@ openLetter.addEventListener("click", () => {
 });
 
 // ปุ่มอ่านจดหมาย
+
 readBtn.addEventListener("click", () => {
   if (!letterOpened) return;
   openModal();
