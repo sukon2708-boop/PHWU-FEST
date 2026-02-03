@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เพลงสำหรับเธอ</title>
+
+  <!-- CSS หลัก -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="shell center">
+
+      <!-- หัวข้อ -->
+      <h4>เพลงสำหรับเธอ</h4>
+      <h7>
+YEW - หมวกเมฆสีรุ้ง</h7>
+
+      <!-- แผ่นเสียง -->
+      <div class="vinyl-wrap">
+        <img src="assets/vinyl.png" class="vinyl" id="vinyl" alt="vinyl">
+      </div>
+
+      <!-- แถบเวลาเพลง -->
+      <div class="progress-box">
+        <span id="currentTime">00:00</span>
+
+        <input
+          type="range"
+          id="progress"
+          value="0"
+          min="0"
+          step="1"
+        />
+
+        <span id="duration">00:00</span>
+      </div>
+
+      <!-- ปุ่มควบคุม -->
+      <div class="music-controls">
+        <div class="btn-row">
+          <button class="btn" id="playBtn">▶ เล่นเพลง</button>
+
+          <!-- 🔙 กลับไปหน้า letter.html -->
+          <a class="btn secondary" href="letter.html">ย้อนกลับ</a>
+        </div>
+      </div>
+
+      <!-- เพลง -->
+      <audio id="music">
+        <source src="assets/song.mp3" type="audio/mpeg">
+        เบราว์เซอร์ของคุณไม่รองรับ audio
+      </audio>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/music.js"></script>
+
+</body>
+</html>
